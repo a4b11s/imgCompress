@@ -14,7 +14,7 @@ function App() {
 			formData.append(files[i].name, files[i]);
 		}
 		setIsUploading(true);
-		fetch("http://localhost:3002/api/img", {
+		fetch(process.env.REACT_APP_BACKEND_HOST+process.env.REACT_APP_BACKEND_IMG_COMPRESS_ENDPOINT, {
 			method: "POST",
 			body: formData,
 		}).then((data) => {

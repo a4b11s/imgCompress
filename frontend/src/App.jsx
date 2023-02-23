@@ -1,7 +1,7 @@
 import "./App.css";
 import ImgInput from "./Component/ImgInput";
 import { useState } from "react";
-import Spiner from "./Component/Spiner";
+import Spinner from "./Component/Spinner";
 
 function App() {
 	const [isUploading, setIsUploading] = useState(false);
@@ -28,7 +28,7 @@ function App() {
 
 	return (
 		<div className="container">
-			{isUploading ? <Spiner /> : <ImgInput callback={handleFile} />}
+			{isUploading ? <Spinner /> : <ImgInput callback={handleFile} />}
 
 			{uploadData && (
 				<a className="downloadBtn" href={uploadData}>

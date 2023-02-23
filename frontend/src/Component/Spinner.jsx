@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Spiner.module.css";
-function Spiner() {
+function Spinner() {
 	return (
 		<div className={styles.spinner}>
 			<div></div>
@@ -10,4 +10,4 @@ function Spiner() {
 	);
 }
 
-export default Spiner;
+export default Spinner;

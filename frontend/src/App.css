@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    margin: 0 auto;
+    max-width: 900px;
+    min-width: 400px;
+}
+.downloadBtn{
+    color: rgb(0, 114, 229);
+    font-size: 28px;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    border: rgb(0, 114, 229) solid;
+    padding: 6px;
+    border-radius: 16px;
+    margin: 60px auto 0;
+}

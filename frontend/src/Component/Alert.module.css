@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
     width: 300px;
     background: rgb(253, 237, 237);
     color: rgb(95, 33, 32);
@@ -12,7 +12,8 @@
     display: flex;
     align-items: center;
 }
-.icon{
+
+.icon {
     margin-right: 5px;
     width: 24px;
     height: 24px;

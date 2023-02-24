@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import PropTypes from "prop-types";
-import styles from "./imgInput.module.css";
+import styles from "./ImgInput.module.css";
 
 ImgInput.propTypes = {
 	callback: PropTypes.func,

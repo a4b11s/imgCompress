@@ -1,7 +1,8 @@
 # Image compressor app
-It`s simple app for compressing image.
-Create use <a href="https://github.com/facebook/react/">React</a> and <a href="https://github.com/expressjs/express">Express</a>
 
+It`s simple app for compressing image.
+Create use <a href="https://github.com/facebook/react/">React</a> and <a href="https://github.com/expressjs/express">
+Express</a>
 
 ## BackEnd
 
@@ -10,10 +11,11 @@ Create use <a href="https://github.com/facebook/react/">React</a> and <a href="h
 ```bash
 npm install
 ```
+
 #### for install dependencies.
 
-
 Use for run:
+
 ```bash
 npm start
 ```
@@ -25,10 +27,11 @@ npm start
 ```bash
 npm install
 ```
+
 ### for install dependencies.
 
-
 Use for run:
+
 ```bash
 npm start
 ```

@@ -1,12 +1,14 @@
-*{
+* {
     box-sizing: border-box;
 }
-.container{
+
+.container {
     margin: 0 auto;
     max-width: 900px;
     min-width: 400px;
 }
-.downloadBtn{
+
+.downloadBtn {
     color: rgb(0, 114, 229);
     font-size: 28px;
     text-decoration: none;

@@ -3,7 +3,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const fileUpload = require('express-fileupload');
 const imgRouter = require('./routes/img');
-const {accessControl} = require("./middleware/accessControl");
+const { accessControl } = require('./middleware/accessControl');
 
 const app = express();
 
@@ -17,5 +17,5 @@ app.use(cookieParser());
 app.use(accessControl);
 app.use('/api/img', imgRouter);
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Server started on port ${port}`);
 });

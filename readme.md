@@ -35,3 +35,4 @@ Use for run:
 ```bash
 npm start
 ```
+#### add .env use .env.example

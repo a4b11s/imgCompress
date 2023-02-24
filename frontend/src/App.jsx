@@ -1,11 +1,22 @@
 import "./App.css";
 import ImgInput from "./Component/ImgInput";
-import { useState } from "react";
+import React, { useState } from "react";
 import Spinner from "./Component/Spinner";
+import Alert from "./Component/Alert";
+
+
 
 function App() {
 	const [isUploading, setIsUploading] = useState(false);
 	const [uploadData, setUploadData] = useState("");
+	const [isError, setIsError] = useState(false);
+
+	function handleError() {
+		setIsError(true)
+		setIsUploading(false)
+		setTimeout(()=>setIsError(false), 8000)
+	}
+
 
 	function handleFile(files) {
 		setUploadData("");
@@ -23,13 +34,17 @@ function App() {
 				setUploadData(objectURL);
 				setIsUploading(false);
 			});
+		}).catch(err=>{
+			console.log(err)
+			handleError(err)
 		});
 	}
+
 
 	return (
 		<div className="container">
 			{isUploading ? <Spinner /> : <ImgInput callback={handleFile} />}
-
+			<Alert isOpen={isError} message="Fetching error"/>
 			{uploadData && (
 				<a className="downloadBtn" href={uploadData}>
 					Download

@@ -6,7 +6,6 @@ router.post('/', function (req, res) {
   try {
     if (req.files) {
       compressFiles(Object.values(req.files)).then((data) => {
-        console.log(data);
         res.type('application/zip');
         res.send(data);
       });

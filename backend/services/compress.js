@@ -14,7 +14,7 @@ async function filesArray2Zip(filesArray) {
 
 async function compressFiles(files) {
   return await filesArray2Zip(files).then(() => {
-    return zip.generateAsync({ type: 'arraybuffer' }).then((buffer) => {
+    return zip.generateAsync({ type: 'nodebuffer' }).then((buffer) => {
       return buffer;
     });
   });

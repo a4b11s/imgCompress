@@ -39,8 +39,9 @@ function App() {
         data
           .arrayBuffer()
           .then((buffer) => {
-            let blob = new Blob(new Uint8Array(buffer));
-            setUploadData(blob);
+            let blob = new Blob([buffer], { type: 'application/zip' });
+            const blobUrl = URL.createObjectURL(blob);
+            setUploadData(blobUrl);
             setIsUploading(false);
           })
           .catch((e) => {
@@ -57,7 +58,7 @@ function App() {
       {isUploading ? <Spinner /> : <ImgInput callback={handleFile} />}
       <Alert isOpen={isError} message='Fetching error' />
       {uploadData && (
-        <a download='image.zip' className='downloadBtn' href={uploadData}>
+        <a className='downloadBtn' href={uploadData}>
           Download
         </a>
       )}
